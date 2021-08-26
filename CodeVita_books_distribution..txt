@@ -1,0 +1,19 @@
+# CodeVita distribute books problem.
+
+def fact(q):
+    if q == 0:
+        return 1
+    else:
+        f = 1
+        while q != 0:
+            f = f * q
+            q -= 1
+        return f
+
+n = int(input())
+sum1 = 0
+
+for i in range(0, n+1):
+    sum1 = sum1 + (((-1)**i) / fact(i))     # This is basically nothing but a 'derrangement'. we have to do '!n' not 'n!'
+
+print(round(res * sum1))
